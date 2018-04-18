@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Brew Finder</title>
+  <meta charset="UTF-8">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./scripts/scripts.js" type="text/javascript"></script>
+
+<link href="styles/styles.css" rel="stylesheet" type="text/css">
+
+<body>
+
+<h1>Brew Finder</h1>
+<div id='messages'>
+    <h2>Messages</h2>
+    <p id="umessage"></p>
+</div>
+
+<div id='logout_form'>
+    <p id="uname"></p>
+    <form action='/logout' method='post'>
+        <input class='send' type='submit' value='Logout' text='Logout'/>
+    </form>
+</div>
+<div id='reg_form' >
+    <form action='/users' method='post'>
+        Register:<br>
+        <input class='reg_creds' type="text" name="username" placeholder="username">
+        <input class='reg_creds' type="password" name="password" placeholder="password">
+        <input class='reg_creds' type="password" name="passwordConf" placeholder="confirm password">
+        <input class='send' type='submit' value='Submit'/>
+    </form>
+    <br>
+    <p class='reg_toggle'> Already a member? Click here to login.</p>
+</div>
+<div id='login_form'>
+    <form action='/users' method='post'>
+        Login:<br>
+        <input class='log_creds' type="text" name="usernameLog" placeholder="username">
+        <input class='log_creds' type="password" name="passwordLog" placeholder="password">
+        <input class='send' type='submit' value='Submit'/>
+    </form>
+    <br>
+    <p class='reg_toggle'> Not yet a member? Click here to register.</p>
+</div>
+<br><br>
+<div id="search_header">
+<h2>Search</h2>
+<img id="toggle_search" src="./resources/icons/minimize.png">
+</div>
+<div id='search_panel'>
+    <form autocomplete="on">
+        <div id="search_categories">
+            <div class="search_cat">
+                <img class="search_image" src="./resources/icons/style.png">
+                <br>
+                <input type="text" id="style" placeholder="Style">
+            </div>
+            <div class="search_cat">
+                <img class="search_image" src="./resources/icons/hops.png">
+                <br>
+                <input type="text" id="hop" placeholder="Hop">
+            </div>
+            <div class="search_cat">
+                <img class="search_image" src="./resources/icons/malt.png">
+                <br>
+                <input type="text" id="malt" placeholder="Malt">
+            </div>
+            <div class="search_cat">
+                <img class="search_image" src="./resources/icons/food.png">
+                <br>
+                <input type="text" id="pairing" placeholder="Foor pairing">
+            </div>
+        </div>
+        <br>
+        <input type="button" value="Search" id="search"/>
+    </form>
+</div>
+	<h2 class="click_on_table"> Click on a row in the table for more information!</h2>
+    <input type="button" value="My Ratings" id="my_ratings"/>
+    <h2 class="no_ratings"> You have no ratings. Add ratings by searching for beers!</h2>
+    <table class="my_ratings_table" style="width:80%" id="my_ratings_table" border="2">
+        <thead>
+            <tr>
+                <th>Beer</th>
+                <th>Description</th> 
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody id=tbody>
+        </tbody>
+    </table>
+    <table class="results_table" style="width:80%" id="results_table" border="2">
+        <thead>
+            <tr>
+                <th>Beer</th>
+                <th>Description</th> 
+                <th>Rating</th>
+                <th>Add</th>
+            </tr>
+        </thead>
+        <tbody id=tbody>
+        </tbody>
+    </table>
+<div>
+    <table class="detailed_results" style="width:80%" id="detailed_results" border="2">
+        <tr><th>detail</th><td></td></tr>
+    </table>
+
+</div>
+</body>
+</html>

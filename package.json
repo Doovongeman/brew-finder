@@ -1,0 +1,37 @@
+{
+  "name": "assignment-2-blessed",
+  "version": "1.0.0",
+  "description": "Beer recipe search",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FallCSC309/assignment-2-blessed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FallCSC309/assignment-2-blessed/issues"
+  },
+  "homepage": "https://github.com/FallCSC309/assignment-2-blessed#readme",
+  "keywords": [
+    "Beer",
+    "search\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Crecipe\u001b[2\u001b[D\u001b[2~pe",
+    "search"
+  ],
+  "devDependencies": {
+    "mongodb": "^2.2.33"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "connect-mongo": "^2.0.0",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "mongoose": "^4.13.5",
+    "nodemon": "^1.12.1"
+  }
+}
